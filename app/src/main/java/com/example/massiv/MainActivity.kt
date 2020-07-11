@@ -19,19 +19,26 @@ class MainActivity : AppCompatActivity() {
 
 
 
+
+
+
+
         val Edmassiv1 = findViewById<EditText>(R.id.Edmassiv1)
         val Edmassiv2 = findViewById<EditText>(R.id.Edmassiv2)
         val Edmassiv3 =findViewById<EditText>(R.id.Edmassiv3)
         val Edmassiv4 = findViewById<EditText>(R.id.Edmassiv4)
         val Edmassiv5 = findViewById<EditText>(R.id.Edmassiv5)
 
-        val Texmassiv1 = findViewById<TextView>(R.id.Texmassiv1)
-        val Texmassiv2=findViewById<TextView>(R.id.Texmassiv2)
+        val Texmassiv1 =findViewById<TextView>(R.id.Texmassiv1)
+        val Texmassiv2 = findViewById<TextView>(R.id.Texmassiv2)
         val Texmassiv3 = findViewById<TextView>(R.id.Texmassiv3)
         val Texmassiv4 = findViewById<TextView>(R.id.Texmassiv4)
         val Texmassiv5 = findViewById<TextView>(R.id.Texmassiv5)
 
-        val Update = findViewById<Button>(R.id.update)
+        
+
+
+        val update = findViewById<Button>(R.id.update)
 
 
 
@@ -82,23 +89,18 @@ class MainActivity : AppCompatActivity() {
            /// preference.edit().putString("Texmassiv2",Texmassiv2.text.toString()).apply()
 
             val Edtext3 = Edmassiv3.text.toString()
-            preference.edit().putString("Edmassiv3",Edtext3).apply()
+            preference.edit().putString("Edtext3",Edtext3).apply()
             ///preference.edit().putString("Texmassiv3",Texmassiv3.text.toString()).apply()
 
             val Edtext4 = Edmassiv4.text.toString()
-            preference.edit().putString("Edmassiv4",Edtext4).apply()
+            preference.edit().putString("Edtext4",Edtext4).apply()
             ///preference.edit().putString("Texmassiv4",Texmassiv4.text.toString()).apply()
 
             val Edtext5 = Edmassiv5.text.toString()
-            preference.edit().putString("Edmassiv5",Edtext5).apply()
+            preference.edit().putString("Edtext5",Edtext5).apply()
             ///preference.edit().putString("Texmassiv5",Texmassiv5.text.toString()).apply()
 
         }
-
-
-
-
-
 
 
     }
