@@ -71,12 +71,8 @@ class MainActivity : AppCompatActivity() {
         val c4 =d4*p4
         Texmassiv5?.text=c4.toString()
 
-
-
-
-
-
     }
+
 
     private fun initClicks(){
 
@@ -123,9 +119,7 @@ class MainActivity : AppCompatActivity() {
          Edmassiv5 = findViewById<EditText>(R.id.Edmassiv5)
 
 
-
     }
-
 
 }
 
