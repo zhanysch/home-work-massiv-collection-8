@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
     var Edmassiv3: EditText?=null
     var Edmassiv4: EditText?=null
     var Edmassiv5:EditText?=null
+    var update:Button?=null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,8 +31,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         initView()
+        initClicks()
 
-        val update = findViewById<Button>(R.id.update)
+
 
         Edmassiv1?.setText(massiv[0].toString())
         Edmassiv2?.setText(massiv[1].toString())
@@ -69,9 +71,17 @@ class MainActivity : AppCompatActivity() {
         val c4 =d4*p4
         Texmassiv5?.text=c4.toString()
 
-        val preference = getSharedPreferences("Preference", Context.MODE_PRIVATE)
 
-        update.setOnClickListener {
+
+
+
+
+    }
+
+    private fun initClicks(){
+
+        val preference = getSharedPreferences("Preference", Context.MODE_PRIVATE)
+        update?.setOnClickListener {
             val Edtext=Edmassiv1?.text.toString()
             preference.edit().putString("Edtext",Edtext).apply()
             preference.edit().putString("texmassiv1",Texmassiv1?.text.toString()).apply()
@@ -94,8 +104,8 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-
     }
+
 
     private fun initView(){
          Texmassiv1 =findViewById<TextView>(R.id.Texmassiv1)
@@ -104,8 +114,9 @@ class MainActivity : AppCompatActivity() {
          Texmassiv4 = findViewById<TextView>(R.id.Texmassiv4)
          Texmassiv5 = findViewById<TextView>(R.id.Texmassiv5)
 
+        val update = findViewById<Button>(R.id.update)
 
-         Edmassiv1 = findViewById<EditText>(R.id.Edmassiv1)
+        Edmassiv1 = findViewById<EditText>(R.id.Edmassiv1)
         Edmassiv2 = findViewById<EditText>(R.id.Edmassiv2)
          Edmassiv3 =findViewById<EditText>(R.id.Edmassiv3)
          Edmassiv4 = findViewById<EditText>(R.id.Edmassiv4)
