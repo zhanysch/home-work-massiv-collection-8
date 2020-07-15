@@ -9,7 +9,6 @@ import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-
     val massiv = arrayOf(4,45,234,234,23)
 
     var Texmassiv1:TextView?=null
@@ -24,6 +23,7 @@ class MainActivity : AppCompatActivity() {
     var Edmassiv4: EditText?=null
     var Edmassiv5:EditText?=null
     var update:Button?=null
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,9 +43,7 @@ class MainActivity : AppCompatActivity() {
             initsumm()
 
 
-        }
-
-    }
+        } }
 
 
     private fun initsumm(){
@@ -56,7 +54,6 @@ class MainActivity : AppCompatActivity() {
         Edmassiv3?.setText(massiv[2].toString())
         Edmassiv4?.setText(massiv[3].toString())
         Edmassiv5?.setText(massiv[4].toString())
-
 
 
         val d=4
@@ -96,25 +93,21 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun initView(){
-         Texmassiv1 =findViewById<TextView>(R.id.Texmassiv1)
-         Texmassiv2 = findViewById<TextView>(R.id.Texmassiv2)
-         Texmassiv3 = findViewById<TextView>(R.id.Texmassiv3)
-         Texmassiv4 = findViewById<TextView>(R.id.Texmassiv4)
-         Texmassiv5 = findViewById<TextView>(R.id.Texmassiv5)
+        Texmassiv1 =findViewById(R.id.Texmassiv1)
+        Texmassiv2 = findViewById(R.id.Texmassiv2)
+        Texmassiv3 = findViewById(R.id.Texmassiv3)
+        Texmassiv4 = findViewById(R.id.Texmassiv4)
+        Texmassiv5 = findViewById(R.id.Texmassiv5)
 
-        val update = findViewById<Button>(R.id.update)
+         update = findViewById(R.id.update)
 
-        Edmassiv1 = findViewById<EditText>(R.id.Edmassiv1)
-        Edmassiv2 = findViewById<EditText>(R.id.Edmassiv2)
-         Edmassiv3 =findViewById<EditText>(R.id.Edmassiv3)
-         Edmassiv4 = findViewById<EditText>(R.id.Edmassiv4)
-         Edmassiv5 = findViewById<EditText>(R.id.Edmassiv5)
+        Edmassiv1 = findViewById(R.id.Edmassiv1)
+        Edmassiv2 = findViewById(R.id.Edmassiv2)
+        Edmassiv3 =findViewById(R.id.Edmassiv3)
+        Edmassiv4 = findViewById(R.id.Edmassiv4)
+        Edmassiv5 = findViewById(R.id.Edmassiv5)
 
 
     }
 
 }
-
-
-
-
